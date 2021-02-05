@@ -1,0 +1,10 @@
+.message {
+  background-color: lightblue;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: flex;
+}
+.sender {
+  color: darkblue;
+  margin-right: 10px;
+}
