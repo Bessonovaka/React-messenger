@@ -1,3 +1,8 @@
 .chatlist {
   width: 30%;
 }
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

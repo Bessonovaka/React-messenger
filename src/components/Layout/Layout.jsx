@@ -14,7 +14,7 @@ export default class Layout extends React.Component {
             <Header  />
             <div className="messenger-box">
                 <ChatList />
-                <Messenger />
+                <Messenger match={this.props.match}/>
             </div>
         </div>
 
