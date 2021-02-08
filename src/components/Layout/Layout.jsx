@@ -13,8 +13,8 @@ export default class Layout extends React.Component {
         <div className="layout">
             <Header  />
             <div className="messenger-box">
-                <ChatList />
-                <Messenger match={this.props.match}/>
+                <ChatList chats={this.props.chats} />
+                <Messenger match={this.props.match} chats={this.props.chats} messages={this.props.messages} sendMessage={this.props.sendMessage} />
             </div>
         </div>
 

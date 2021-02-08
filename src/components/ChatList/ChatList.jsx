@@ -12,12 +12,14 @@ import React from 'react';
 export default class ChatList extends React.Component {
     
    render() {
-       
+       const {chats} = this.props;
        return (
         <List className="chatlist">
-            <ListItem button><Link to="/chats/1" className="link"><ListItemText primary="Чат 1" /></Link></ListItem>
-            <ListItem button><Link to="/chats/2" className="link"><ListItemText primary="Чат 2" /></Link></ListItem>
-            <ListItem button><Link to="/chats/3" className="link"><ListItemText primary="Чат 3" /></Link></ListItem>
+            {chats.map((chat, idx) => <ListItem key={idx} button>
+                <Link to={chat.link} className="link">
+                    <ListItemText primary={chat.name} />
+                </Link>
+            </ListItem>)}
         </List>
        )
    }
