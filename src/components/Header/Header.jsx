@@ -1,16 +1,20 @@
 import './Header.css'
 
-import React from 'react';
+import React, { PureComponent } from 'react';
 import {Link} from 'react-router-dom';
 
 
-export default class Header extends React.Component {
-
+export class Header extends PureComponent {
    render() {
+       const { chats } = this.props;
+
        return (
-        <div className="header">
+        <header className="header">
             <Link to="/profile" className="header__link"><h1>Мой чат</h1></Link>
-        </div>
+            { chats && chats.length && <ul className="header__list">
+                {chats.map((chat, idx) => <li key={idx}>{chat.name}</li>)}
+            </ul> }
+        </header>
 
        )
    }

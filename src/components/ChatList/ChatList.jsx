@@ -12,7 +12,7 @@ import React from 'react';
 export default class ChatList extends React.Component {
     
    render() {
-       const {chats} = this.props;
+       const {chats, addChat} = this.props;
        return (
         <List className="chatlist">
             {chats.map((chat, idx) => <ListItem key={idx} button>
@@ -20,6 +20,9 @@ export default class ChatList extends React.Component {
                     <ListItemText primary={chat.name} />
                 </Link>
             </ListItem>)}
+            <Link onClick={addChat} className="link">
+                <ListItemText primary="Добавить чат" />
+            </Link>
         </List>
        )
    }
